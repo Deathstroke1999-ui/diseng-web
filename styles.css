@@ -1,3 +1,14 @@
+html { font-size: 62.5%;
+    -webkit-text-size-adjust:none;
+    -ms-text-size-adjust:none;
+    -moz-text-size-adjust:none;
+    text-size-adjust:none; } 
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     
+    }
 .nabvar-brand  {
     position: relative;
     background: url(img/Sin-título-2.png);
@@ -9,33 +20,50 @@ section{
     background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.40129555240064774) 200%), url(img/33879.jpg);
     height: 100vh;
     background-size: cover;
+    background-position: center;
 }
 .titulo-banner{
     color: #ffffff;
-    font-size: 40px;
+    font-size: 4rem;
     margin-top: 200px;
     font-family: 'Archivo Black', sans-serif;
     -webkit-text-stroke: 2px black; 
-    text-align: justify;
+    text-align: left;
+    font-weight: 600;
+    overflow: hidden;
     }
-    p{
+    @media (max-width: 575.98px) { .titulo-banner{
+        margin-top: 100px;
+  font-size: 3rem;
+  text-align: center;
+  -webkit-text-stroke: 1px black; 
+    } }
+    .p{
         color: #ffffff;
         margin-bottom: 15px;
-        font-size: 30px;
-        font-weight: 800;
+        font-size: 2.5rem;
+        font-weight: 300;
         font-family: 'Lato', sans-serif;
         text-align: justify;
+        overflow: hidden;
     }
     
     @media (max-width: 575.98px) { section{
         height: auto;
     } }
+    @media (max-width: 650px) { section{
+        height: auto;
+    } }
+
+
+
     .btn-dark, .btn-dark:hover, .btn-dark:active, .btn-dark:visited {
         background-color: #EB0ADB ;
     }
  button a{
         color: #fff;
         text-decoration: none;
+        font-size: 2rem;
       }
  button  a:hover{
         color: #fff;
@@ -62,7 +90,108 @@ height: 50vh;
 
       @media (max-width: 575.98px) {
           .img-banner{
-              margin-top: 5rem;
+              margin-top: 4rem;
               height: 40vh;
+           background-size: cover;
+           background-position: right;
           }
     } 
+    @media (max-width: 650px) {
+        .img-banner{
+            margin-top: 4rem;
+            height: 80vh;
+        }
+  } 
+
+  h2{
+      text-align: center;
+      font-size: 4rem;
+  }
+  .article{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .bg-dark {
+    background:transparent !important;
+    transition:0.75s ease;
+}
+.bg-dark.scrolled {
+    background:#000 !important;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-title{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 37px;
+}
+.grid-p{
+    text-align: left;
+    color: rgba(15,15,15,0.7) !important;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-top: 5px;
+}
+.servicios{
+    margin-bottom: 4rem;
+}
+
+article{
+    height: 100vh;
+
+}
+
+ path {
+
+stroke: #fff;
+fill: #fff;
+stroke-dasharray: 1800;
+opacity: 10;
+animation: animate 6s cubic-bezier(0,0.23,1,.1) infinite .5ms;
+
+}
+@keyframes animate {
+ 0%{
+opacity: 0;
+fill: none;
+stroke-dashoffset: 1800;
+ }  
+ 30%{
+    opacity: 5;
+ 
+    stroke-dashoffset: 1800;
+ } 
+ 90%{
+opacity: 8;
+ } 
+ 100%{
+     opacity: 10;
+
+    } 
+}
+.centrado-img{
+    display: flex;
+  justify-content: center;
+  align-items: center; height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.poppins1{
+font-size: 2.5rem;
+color: #fff;
+}
+.poppins{
+    font-size: 6.3rem;
+    color:#fff ;
+}
+.img-marca{
+    height: 60px !important;
+}
+li a{
+    font-size: 1.5rem;
+}
